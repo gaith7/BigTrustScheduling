@@ -19,9 +19,12 @@ cost by 58% compared to the SJF, by 47% compared to the RR, and by 38% compared 
 
 * python 
 * java 
+* Hadoop 2
+
 
 ## Implementation
 There are two files for the code
-* We use cloudsim to calculate the trust value for the VMs.
-* 
+* We use cloudsim to monitor the VM performance and calculate the trust value for the VMs.
+* We use Python to cluster the tasks and rank it depend on the priorities.
 * We employ a datset collected by Bitbrains, a service provider that is specialized in managed hosting and business computation for enterprises. 
+* 
