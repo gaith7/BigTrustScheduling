@@ -27,4 +27,6 @@ There are two files for the code
 * We use cloudsim to monitor the VM performance and calculate the trust value for the VMs.
 * We use Python to cluster the tasks and rank it depend on the priorities.
 * We employ a datset collected by Bitbrains, a service provider that is specialized in managed hosting and business computation for enterprises. 
-* 
+*  (hadoop_vm_configuration.bash)
+ will run jobtracker, tasktracker, namenode, datanode on the specific nodes according to your configuration
+* To use the scheduler, you also need to start client side on physical server that tasktracer is located on. The client side will report     CPU, RAM, bandwidth, and disk usage.
