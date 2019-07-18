@@ -18,8 +18,10 @@ cost by 58% compared to the SJF, by 47% compared to the RR, and by 38% compared 
 ## Requirements
 
 * python 3
+* Install Python pip.
 * java 
 * Hadoop 2
+* Download and install the Google Cloud SDK.
 
 
 ## Implementation
@@ -29,8 +31,11 @@ There are two files for the code
 * We employ a datset collected by Bitbrains, a service provider that is specialized in managed hosting and business computation for enterprises. 
 *  (hadoop_vm_configuration.bash)
  will run jobtracker, tasktracker, namenode, datanode on the specific nodes according to your configuration.
+* In $HADOOP_HOME/conf/masters, enter the hostname or host IP of your namenode (don't forget to remove the default one if you don't need     it).
+* In $HADOOP_HOME/conf/slaves, enter the hostname or host IP of your datanode (don't forget to remove the default one if you don't need     it).
 * To use the scheduler, you also need to start a physical server that tasktracer is located on. The tasktracer will report CPU, RAM,       bandwidth, and disk usage.
-
+* In $HADOOP_HOME/conf/core-site.xml, config the hadoop tmp directory (where Hadoop holds its data, use absolute path). and                fs.default.name.
+* In $HADOOP_HOME/conf/hdfs-site.xml, configure the block size and packet size(strip size), block size should be a multiple of packet      size.
 #### Create a new conda environment for our dependencies
 $ conda create -n demo -c conda-yarn conda-pack ipython pyarrow
 #### Activate the environment
