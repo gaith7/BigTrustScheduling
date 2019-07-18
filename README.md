@@ -26,8 +26,8 @@ cost by 58% compared to the SJF, by 47% compared to the RR, and by 38% compared 
 
 ## Implementation
 There are two files for the code
-* We use cloudsim to monitor the VM performance and calculate the trust value for the VMs.
-* We use Python to cluster the tasks and rank it depend on the priorities.
+1. We use cloudsim to monitor the VM performance and calculate the trust value for the VMs.
+2.  We use Python to cluster the tasks and rank it depend on the priorities.
 * We employ a datset collected by Bitbrains, a service provider that is specialized in managed hosting and business computation for enterprises. 
 *  (hadoop_vm_configuration.bash)
  will run jobtracker, tasktracker, namenode, datanode on the specific nodes according to your configuration.
@@ -36,6 +36,8 @@ There are two files for the code
 * To use the scheduler, you also need to start a physical server that tasktracer is located on. The tasktracer will report CPU, RAM,       bandwidth, and disk usage.
 * In $HADOOP_HOME/conf/core-site.xml, config the hadoop tmp directory (where Hadoop holds its data, use absolute path). and                fs.default.name.
 * In $HADOOP_HOME/conf/hdfs-site.xml, configure the block size and packet size(strip size), block size should be a multiple of packet      size.
+* In $HADOOP_HOME/conf/mapred-site.xml, configure task scheduler.
+
 #### Create a new conda environment for our dependencies
 $ conda create -n demo -c conda-yarn conda-pack ipython pyarrow
 #### Activate the environment
