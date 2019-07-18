@@ -28,5 +28,11 @@ There are two files for the code
 * We use Python to cluster the tasks and rank it depend on the priorities.
 * We employ a datset collected by Bitbrains, a service provider that is specialized in managed hosting and business computation for enterprises. 
 *  (hadoop_vm_configuration.bash)
- will run jobtracker, tasktracker, namenode, datanode on the specific nodes according to your configuration
-* To use the scheduler, you also need to start client side on physical server that tasktracer is located on. The client side will report     CPU, RAM, bandwidth, and disk usage.
+ will run jobtracker, tasktracker, namenode, datanode on the specific nodes according to your configuration.
+* To use the scheduler, you also need to start a physical server that tasktracer is located on. The tasktracer will report CPU, RAM,       bandwidth, and disk usage.
+
+#### Create a new conda environment for our dependencies
+$ conda create -n demo -c conda-yarn conda-pack ipython pyarrow
+#### Activate the environment
+$ conda activate demo \
+Next we package this environment for distribution. We can do this using the conda pack command. This packages the environment into a relocatable tarball so it can be distributed to the YARN containers.
