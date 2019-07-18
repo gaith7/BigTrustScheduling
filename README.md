@@ -17,7 +17,7 @@ cost by 58% compared to the SJF, by 47% compared to the RR, and by 38% compared 
 
 ## Requirements
 
-* python 
+* python 3
 * java 
 * Hadoop 2
 
@@ -36,3 +36,8 @@ $ conda create -n demo -c conda-yarn conda-pack ipython pyarrow
 #### Activate the environment
 $ conda activate demo \
 Next we package this environment for distribution. We can do this using the conda pack command. This packages the environment into a relocatable tarball so it can be distributed to the YARN containers.
+
+
+
+
+**Please note: BigTrustScheduling is not yet production ready. However, the project is rapidly progressing with some very useful features.**
