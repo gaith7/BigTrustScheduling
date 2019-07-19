@@ -130,7 +130,7 @@ class TasksScheduler:
 
         tasks = tmp
 
-        if DEBUG:
+        if DEBUG: 
             for task in tasks:
                 print (task)
 
