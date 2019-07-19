@@ -6,7 +6,7 @@ sudo rm -r /usr/local/hadoop
 sudo mkdir /usr/local/hadoop
 sudo chmod 777 -R /usr/local/hadoop
 
-echo "Download newest render"
+echo "Download newest one"
 wget 192.168.56.1/hadoop-2.6.0.tar.gz
 tar -xzf hadoop-2.6.0.tar.gz
 sudo cp -a hadoop-2.6.0/. /usr/local/hadoop
